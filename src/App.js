@@ -1,23 +1,273 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
+
 function App() {
+  const [selectedCert, setSelectedCert] = useState(null)
+
+
+  // Certificate data
+  const certificates = [
+    { id: 1, name: 'Python PCEP', image: 'https://placehold.co/600x400/1e293b/a855f7?text=Python+PCEP+Certificate' },
+    { id: 2, name: 'Azure Fundamentals', image: 'https://placehold.co/600x400/1e293b/a855f7?text=Azure+Fundamentals' }
+  ];
+
+  const openModal = (cert) => {
+    setSelectedCert(cert);
+  };
+
+  const closeModal = () => {
+    setSelectedCert(null);
+  };
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Navigation Bar */}
+      <nav className="navbar">
+        <div className="nav-container">
+          <div className="logo">AMER</div>
+          <ul className="nav-links">
+            <li><button onClick={() => scrollToSection('home')} className="nav-btn">Home</button></li>
+            <li><button onClick={() => scrollToSection('about')} className="nav-btn">About</button></li>
+            <li><button onClick={() => scrollToSection('education')} className="nav-btn">Education</button></li>
+            <li><button onClick={() => scrollToSection('experience')} className="nav-btn">Experience</button></li>
+            <li><button onClick={() => scrollToSection('projects')} className="nav-btn">Projects</button></li>
+            <li><button onClick={() => scrollToSection('skills')} className="nav-btn">Skills</button></li>
+            <li><button onClick={() => scrollToSection('certificates')} className="nav-btn">Certificates</button></li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <div className="container">
+        {/* Home Section */}
+        <section id="home">
+          <div className="card">
+            <div className="profile-wrapper">
+              <div className="avatar-placeholder"><img src='/IMG_5531.jpg' alt="Amer" className="avatar" /></div>
+              <div className="intro">
+                <h1>Amer Almonajed</h1>
+                <div className="job-title">Software Engineer</div>
+                <p>I am an enthusiastic junior software engineer with a passion for problem solving and a solid foundation in software development methodologies, eager to contribute to innovative projects and grow within a dynamic organization.</p>
+                <div className="contact-info">
+                  <span className="contact-item">📍 Berlin</span>
+                  <span className="contact-item">✉️ amer.almonajed@gmx.de</span>
+                  <span className="contact-item">📞 +49 0000000000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about">
+          <div className="card">
+            <h2 className="section-title">About Me</h2>
+            <p>I'm a passionate software engineer based in Berlin with a strong background in full-stack development. I love creating elegant solutions to complex problems and continuously learning new technologies. With experience in both frontend and backend development, I bring a holistic approach to software engineering.</p>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section id="education">
+          <div className="card">
+            <h2 className="section-title">Education</h2>
+            
+            <div className="timeline-item">
+              <div className="timeline-title">SOFTWARE ENGINEERING PROGRAM</div>
+              <div className="timeline-subtitle">WBS CODING SCHOOL | Berlin</div>
+              <div className="timeline-date">03/2025 - 04/2026</div>
+              <p>Software Engineering, Computer Science, Data Structure and Algorithms</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-title">SPECIALIST FOR APPLICATION DEVELOPMENT</div>
+              <div className="timeline-subtitle">FORUM Berufsbildung e.V. | Berlin</div>
+              <div className="timeline-date">08/2020 - 07/2022</div>
+              <p>Java, Database SQL, Network, Windows Server Administration</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-title">Training as an Electrical Engineer</div>
+              <div className="timeline-subtitle">KALE TECHNICAL SCHOOL | Greece - Athens</div>
+              <div className="timeline-date">09/2002 - 08/2005</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Experience Section */}
+        <section id="experience">
+          <div className="card">
+            <h2 className="section-title">Experience</h2>
+            
+            <div className="timeline-item">
+              <div className="timeline-title">Internship as Fullstack Developer</div>
+              <div className="timeline-subtitle">Think3DDD | Berlin</div>
+              <div className="timeline-date">02/2026 - Present</div>
+              <p>Fullstack development internship</p>
+            </div>
+            
+            <div className="timeline-item">
+              <div className="timeline-title">Software Developer</div>
+              <div className="timeline-subtitle">IBM Client Innovation Center Germany GmbH | Magdeburg</div>
+              <div className="timeline-date">03/2023 - 09/2023</div>
+              <p>Desktop application processing Biometric Data with specific outputs. Tech stack: Java, SQL, Spring Boot, Database</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-title">Internship as Website Developer</div>
+              <div className="timeline-subtitle">Druck und Folie | Berlin</div>
+              <div className="timeline-date">05/2021 - 03/2022</div>
+              <p>WordPress, HTML, CSS, Graphic Design, Java, Database SQL, Network, Windows Server Administration</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-title">Media and Print Designer</div>
+              <div className="timeline-subtitle">TIPOSEME SIGNMAKING | Athens - Berlin</div>
+              <div className="timeline-date">09/2017 - 03/2020</div>
+              <p>Graphic design and Assembly</p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects">
+          <div className="card">
+            <h2 className="section-title">Projects</h2>
+            
+            <div className="timeline-item">
+              <div className="timeline-title">CuttingCalculator</div>
+              <p>Android app written on Android Studio using Java for measuring metal. Designed for precise industrial measurements.</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-title">SpeakFUn</div>
+              <p>Android application written in Java implementing voice-to-text and mutual interaction features.</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-title">My-WEB in HTML</div>
+              <p>Personal CV website with all skills, links, and testimonials built with HTML, CSS, and responsive design.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills">
+          <div className="card">
+            <h2 className="section-title">Tech Skills</h2>
+            <div className="skills-grid">
+              <div className="skill-category">
+                <h3>Frontend</h3>
+                <div className="skill-tags">
+                  <span className="skill-tag">JavaScript</span>
+                  <span className="skill-tag">React</span>
+                  <span className="skill-tag">TypeScript</span>
+                  <span className="skill-tag">HTML/CSS</span>
+                </div>
+              </div>
+              <div className="skill-category">
+                <h3>Backend</h3>
+                <div className="skill-tags">
+                  <span className="skill-tag">Node.JS</span>
+                  <span className="skill-tag">ExpressJS</span>
+                  <span className="skill-tag">Java/JEE/SpringBoot</span>
+                  <span className="skill-tag">C#/.NET/ASP.NET</span>
+                  <span className="skill-tag">Python</span>
+                </div>
+              </div>
+              <div className="skill-category">
+                <h3>Databases</h3>
+                <div className="skill-tags">
+                  <span className="skill-tag">PostgreSQL</span>
+                  <span className="skill-tag">MongoDB</span>
+                  <span className="skill-tag">SQL</span>
+                </div>
+              </div>
+              <div className="skill-category">
+                <h3>AI & Tools</h3>
+                <div className="skill-tags">
+                  <span className="skill-tag">Gen AI Integration</span>
+                  <span className="skill-tag">OpenAI API</span>
+                  <span className="skill-tag">Gemini API</span>
+                  <span className="skill-tag">Git & GitHub</span>
+                  <span className="skill-tag">Microsoft Office</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 style={{ marginTop: '1.5rem', color: '#a855f7' }}>Soft Skills</h3>
+            <div className="skill-tags">
+              <span className="skill-tag">Communication</span>
+              <span className="skill-tag">Creativity</span>
+              <span className="skill-tag">Time Management</span>
+              <span className="skill-tag">Problem-Solving</span>
+              <span className="skill-tag">Team Player</span>
+            </div>
+
+            <h3 style={{ marginTop: '1.5rem', color: '#a855f7' }}>Languages</h3>
+            <div className="skill-tags">
+              <span className="skill-tag">German - B2</span>
+              <span className="skill-tag">English - B2</span>
+              <span className="skill-tag">Arabic - Native</span>
+              <span className="skill-tag">Greek - B2</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Certificates Section */}
+        <section id="certificates">
+          <div className="card">
+            <h2 className="section-title">Certificates</h2>
+            <div className="certificates-grid">
+              {certificates.map(cert => (
+                <div key={cert.id} className="cert-card" onClick={() => openModal(cert)}>
+                  <div className="cert-icon">📜</div>
+                  <div className="cert-name">{cert.name}</div>
+                </div>
+              ))}
+            </div>
+            <p style={{ marginTop: '1rem', fontSize: '0.8rem', opacity: 0.7 }}>✨ Click on any certificate to view full size ✨</p>
+          </div>
+        </section>
+      </div>
+
+      {/* Modal for Certificates */}
+      {selectedCert && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal" onClick={closeModal}>✕</button>
+            <img src={selectedCert.image} alt={selectedCert.name} />
+            <p style={{ textAlign: 'center', marginTop: '1rem' }}>{selectedCert.name}</p>
+          </div>
+        </div>
+      )}
+
+      {/* Footer with GitHub and LinkedIn */}
+      <footer className="footer">
+        <div className="social-links">
+          <a href="https://github.com/Al-Amer" target="_blank" rel="noopener noreferrer" className="social-link">
+            <i className="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/amer-almonajed" target="_blank" rel="noopener noreferrer" className="social-link">
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:amer.almonajed@gmx.de" className="social-link">
+            <i className="fas fa-envelope"></i>
+          </a>
+        </div>
+        <div className="footer-text">
+          <p>© 2026 Amer Almonajed - Software Engineer | Berlin, Germany</p>
+          <p>GitHub: github.com/Al-Amer | LinkedIn: Amer Almonajed</p>
+        </div>
+      </footer>
     </div>
   );
 }
