@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import AnimatedBackground from './components/AnimatedBackground';
+import RotatingName from './components/RotatingName';
 
 function App() {
-  const [selectedCert, setSelectedCert] = useState(null)
-
+  const [selectedCert, setSelectedCert] = useState(null);
 
   // Certificate data
   const certificates = [
@@ -29,6 +29,9 @@ function App() {
 
   return (
     <div className="App">
+      {/* Animated Rainbow Background */}
+      <AnimatedBackground />
+      
       {/* Navigation Bar */}
       <nav className="navbar">
         <div className="nav-container">
@@ -45,32 +48,23 @@ function App() {
         </div>
       </nav>
 
+      {/* Hero Section with 3D Rotating Name */}
+      <section id="home" className="hero-section">
+        <div className="hero-content">
+          <RotatingName />
+          <div className="hero-text">
+            <p>Software Engineer | Full-Stack Developer | Problem Solver</p>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
       <div className="container">
-        {/* Home Section */}
-        <section id="home">
-          <div className="card">
-            <div className="profile-wrapper">
-              <div className="avatar-placeholder"><img src='/IMG_5531.jpg' alt="Amer" className="avatar" /></div>
-              <div className="intro">
-                <h1>Amer Almonajed</h1>
-                <div className="job-title">Software Engineer</div>
-                <p>I am an enthusiastic junior software engineer with a passion for problem solving and a solid foundation in software development methodologies, eager to contribute to innovative projects and grow within a dynamic organization.</p>
-                <div className="contact-info">
-                  <span className="contact-item">📍 Berlin</span>
-                  <span className="contact-item">✉️ amer.almonajed@gmx.de</span>
-                  <span className="contact-item">📞 +49 0000000000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* About Section */}
         <section id="about">
           <div className="card">
             <h2 className="section-title">About Me</h2>
-            <p>I'm a passionate software engineer based in Berlin with a strong background in full-stack development. I love creating elegant solutions to complex problems and continuously learning new technologies. With experience in both frontend and backend development, I bring a holistic approach to software engineering.</p>
+            <p>I am an enthusiastic junior software engineer with a passion for problem solving and a solid foundation in software development methodologies, eager to contribute to innovative projects and grow within a dynamic organization. Based in Berlin with international experience across Greece and Germany, I bring diverse perspectives to every project.</p>
           </div>
         </section>
 
@@ -84,6 +78,7 @@ function App() {
               <div className="timeline-subtitle">WBS CODING SCHOOL | Berlin</div>
               <div className="timeline-date">03/2025 - 04/2026</div>
               <p>Software Engineering, Computer Science, Data Structure and Algorithms</p>
+              <p>Certifications: Python PCEP, Azure Fundamentals</p>
             </div>
 
             <div className="timeline-item">
@@ -107,13 +102,6 @@ function App() {
             <h2 className="section-title">Experience</h2>
             
             <div className="timeline-item">
-              <div className="timeline-title">Internship as Fullstack Developer</div>
-              <div className="timeline-subtitle">Think3DDD | Berlin</div>
-              <div className="timeline-date">02/2026 - Present</div>
-              <p>Fullstack development internship</p>
-            </div>
-            
-            <div className="timeline-item">
               <div className="timeline-title">Software Developer</div>
               <div className="timeline-subtitle">IBM Client Innovation Center Germany GmbH | Magdeburg</div>
               <div className="timeline-date">03/2023 - 09/2023</div>
@@ -134,6 +122,12 @@ function App() {
               <p>Graphic design and Assembly</p>
             </div>
 
+            <div className="timeline-item">
+              <div className="timeline-title">Internship as Fullstack Developer</div>
+              <div className="timeline-subtitle">Think3DDD | Berlin</div>
+              <div className="timeline-date">02/2026 - Present</div>
+              <p>Fullstack development internship</p>
+            </div>
           </div>
         </section>
 
@@ -184,21 +178,22 @@ function App() {
                 </div>
               </div>
               <div className="skill-category">
-                <h3>Databases</h3>
+                <h3>Databases & AI</h3>
                 <div className="skill-tags">
                   <span className="skill-tag">PostgreSQL</span>
                   <span className="skill-tag">MongoDB</span>
                   <span className="skill-tag">SQL</span>
-                </div>
-              </div>
-              <div className="skill-category">
-                <h3>AI & Tools</h3>
-                <div className="skill-tags">
                   <span className="skill-tag">Gen AI Integration</span>
                   <span className="skill-tag">OpenAI API</span>
                   <span className="skill-tag">Gemini API</span>
+                </div>
+              </div>
+              <div className="skill-category">
+                <h3>Tools & More</h3>
+                <div className="skill-tags">
                   <span className="skill-tag">Git & GitHub</span>
                   <span className="skill-tag">Microsoft Office</span>
+                  <span className="skill-tag">Data Structures & Algorithms</span>
                 </div>
               </div>
             </div>
