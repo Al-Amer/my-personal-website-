@@ -84,25 +84,36 @@ const RotatingName = () => {
           border-radius: 50%;
           animation: orbit linear infinite;
         }
+        .ring-0 {
+          width: 450px;
+          height: 450px;
+        }
         .ring-1 {
-          width: 300px;
-          height: 300px;
+          width: 500px;
+          height: 500px;
           animation-duration: 8s;
           border-color: rgba(168, 85, 247, 0.8);
         }
         .ring-2 {
-          width: 400px;
-          height: 400px;
+          width: 600px;
+          height: 600px;
           animation-duration: 12s;
           animation-direction: reverse;
           border-color: rgba(232, 121, 249, 0.6);
         }
         .ring-3 {
-          width: 500px;
-          height: 500px;
+          width: 700px;
+          height: 700px;
           animation-duration: 16s;
           border-color: rgba(96, 165, 250, 0.5);
           border-style: dashed;
+        }
+        .ring-4 {
+          width: 800px;
+          height: 800px;
+          animation-duration: 20s;
+          animation-direction: reverse;
+          border-color: rgba(150, 79, 161, 0.6);
         }
         @keyframes orbit {
           from { transform: rotate(0deg); }
@@ -130,6 +141,7 @@ const RotatingName = () => {
           .ring-1 { width: 200px; height: 200px; }
           .ring-2 { width: 280px; height: 280px; }
           .ring-3 { width: 360px; height: 360px; }
+          .ring-4 { width: 440px; height: 440px; }
         }
       `}</style>
       <div className="rotating-name-container">
@@ -139,9 +151,12 @@ const RotatingName = () => {
             <div className="name-shadow"></div>
           </div>
           <div className="orbiting-rings">
-            <div className="ring ring-1"></div>
-            <div className="ring ring-2"></div>
-            <div className="ring ring-3"></div>
+            <img className='ring ring-0' src='IMG_5531.jpg' alt='Image'/>
+            <div className="ring ring-1">R
+            </div>
+            <div className="ring ring-2">E</div>
+            <div className="ring ring-3">M</div>
+            <div className="ring ring-4">A</div>
           </div>
           <div className="floating-particles">
             {[...Array(30)].map((_, i) => (
