@@ -243,13 +243,40 @@ function App() {
               <span className="skill-tag">Problem-Solving</span>
               <span className="skill-tag">Team Player</span>
             </div>
-
             <h3 style={{ marginTop: '1.5rem', color: '#a855f7' }}>Languages</h3>
-            <div className="skill-tags">
-              <span className="skill-tag">German - B2</span>
-              <span className="skill-tag">English - B2</span>
-              <span className="skill-tag">Arabic - Native</span>
-              <span className="skill-tag">Greek - B2</span>
+            <div className="simple-language-grid">
+              <div className="simple-language-item">
+                <span className="simple-flag">🇩🇪</span>
+                <span className="simple-name">German</span>
+                <span className="simple-level">B2</span>
+                <div className="simple-stars">
+                  ⭐⭐⭐⭐☆
+                </div>
+              </div>
+              <div className="simple-language-item">
+                <span className="simple-flag">🇬🇧</span>
+                <span className="simple-name">English</span>
+                <span className="simple-level">B2</span>
+                <div className="simple-stars">
+                  ⭐⭐⭐⭐☆
+                </div>
+              </div>
+              <div className="simple-language-item">
+                <span className="simple-flag">🇸🇾</span>
+                <span className="simple-name">Arabic</span>
+                <span className="simple-level">Native</span>
+                <div className="simple-stars">
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+              <div className="simple-language-item">
+                <span className="simple-flag">🇬🇷</span>
+                <span className="simple-name">Greek</span>
+                <span className="simple-level">B2</span>
+                <div className="simple-stars">
+                  ⭐⭐⭐⭐☆
+                </div>
+              </div>
             </div>
           </div>
         </section>
