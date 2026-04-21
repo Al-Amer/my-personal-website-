@@ -3,26 +3,7 @@ import './App.css';
 import AnimatedBackground from './components/AnimatedBackground';
 import RotatingName from './components/RotatingName';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
-function IconGithub() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="Icon_Img_link">
-      <path
-        fill="currentColor"
-        d="M12 .5C5.73.5.75 5.7.75 12.1c0 5.11 3.29 9.44 7.86 10.97.57.11.78-.25.78-.56v-2.1c-3.2.71-3.87-1.42-3.87-1.42-.52-1.35-1.27-1.71-1.27-1.71-1.04-.73.08-.71.08-.71 1.15.08 1.75 1.2 1.75 1.2 1.02 1.78 2.67 1.27 3.32.97.1-.76.4-1.27.73-1.56-2.55-.3-5.23-1.3-5.23-5.79 0-1.28.45-2.33 1.2-3.15-.12-.3-.52-1.52.12-3.17 0 0 .98-.32 3.2 1.2.93-.26 1.92-.4 2.9-.4s1.97.14 2.9.4c2.22-1.52 3.2-1.2 3.2-1.2.64 1.65.24 2.87.12 3.17.75.82 1.2 1.87 1.2 3.15 0 4.5-2.69 5.49-5.25 5.78.41.36.78 1.08.78 2.18v3.23c0 .31.2.67.79.56 4.56-1.53 7.85-5.86 7.85-10.97C23.25 5.7 18.27.5 12 .5Z"
-      />
-    </svg>
-  );
-}
-function IconLinkedIn() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="Icon_Img_link">
-      <path
-        fill="currentColor"
-        d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 23.5h4V7.98h-4V23.5ZM8.5 7.98h3.83v2.12h.05c.53-1 1.83-2.12 3.77-2.12 4.03 0 4.78 2.65 4.78 6.09v9.43h-4v-8.36c0-2-.04-4.56-2.78-4.56-2.78 0-3.2 2.17-3.2 4.41v8.51h-4V7.98Z"
-      />
-    </svg>
-  );
-}
+
 function App() {
   const [selectedCert, setSelectedCert] = useState(null);
 

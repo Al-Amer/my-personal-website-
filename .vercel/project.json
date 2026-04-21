@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_M4DPhpGfOJ5vv64AUnGS037QoR9R",
+  "orgId": "team_jNFYvZfMfT6jY1MTs3GOxy1E",
+  "projectName": "my-personal-website",
+  "settings": {
+    "createdAt": 1776787005297,
+    "framework": "create-react-app",
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "24.x"
+  }
+}
