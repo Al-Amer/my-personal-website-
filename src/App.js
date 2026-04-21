@@ -2,14 +2,51 @@ import React, { useState } from 'react';
 import './App.css';
 import AnimatedBackground from './components/AnimatedBackground';
 import RotatingName from './components/RotatingName';
-
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
+function IconGithub() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="Icon_Img_link">
+      <path
+        fill="currentColor"
+        d="M12 .5C5.73.5.75 5.7.75 12.1c0 5.11 3.29 9.44 7.86 10.97.57.11.78-.25.78-.56v-2.1c-3.2.71-3.87-1.42-3.87-1.42-.52-1.35-1.27-1.71-1.27-1.71-1.04-.73.08-.71.08-.71 1.15.08 1.75 1.2 1.75 1.2 1.02 1.78 2.67 1.27 3.32.97.1-.76.4-1.27.73-1.56-2.55-.3-5.23-1.3-5.23-5.79 0-1.28.45-2.33 1.2-3.15-.12-.3-.52-1.52.12-3.17 0 0 .98-.32 3.2 1.2.93-.26 1.92-.4 2.9-.4s1.97.14 2.9.4c2.22-1.52 3.2-1.2 3.2-1.2.64 1.65.24 2.87.12 3.17.75.82 1.2 1.87 1.2 3.15 0 4.5-2.69 5.49-5.25 5.78.41.36.78 1.08.78 2.18v3.23c0 .31.2.67.79.56 4.56-1.53 7.85-5.86 7.85-10.97C23.25 5.7 18.27.5 12 .5Z"
+      />
+    </svg>
+  );
+}
+function IconLinkedIn() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="Icon_Img_link">
+      <path
+        fill="currentColor"
+        d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 23.5h4V7.98h-4V23.5ZM8.5 7.98h3.83v2.12h.05c.53-1 1.83-2.12 3.77-2.12 4.03 0 4.78 2.65 4.78 6.09v9.43h-4v-8.36c0-2-.04-4.56-2.78-4.56-2.78 0-3.2 2.17-3.2 4.41v8.51h-4V7.98Z"
+      />
+    </svg>
+  );
+}
 function App() {
   const [selectedCert, setSelectedCert] = useState(null);
 
   // Certificate data
   const certificates = [
-    { id: 1, name: 'Python PCEP', image: 'https://placehold.co/600x400/1e293b/a855f7?text=Python+PCEP+Certificate' },
-    { id: 2, name: 'Azure Fundamentals', image: 'https://placehold.co/600x400/1e293b/a855f7?text=Azure+Fundamentals' }
+    { id: 1, name: 'Python PCEP', image: 'puthon_PCEP.png' },
+    { id: 2, name: 'HTML', image: 'certficar_HTML.png' },
+    { id: 3, name: 'Android Studio', image: 'Certificar_AndroidStudio.png' },
+    { id: 4, name: 'Python Harverd', image: 'Certificate_Harvard.png' },
+    { id: 5, name: 'WBS', image: 'Certificate_WBS.png' },
+    { id: 6, name: 'CSS', image: 'certificates_CSS.png' },
+    { id: 7, name: 'Java', image: 'certificates_Java_GL_.png' },
+    { id: 8, name: 'Java', image: 'Certification_Java_EE.png' },
+    { id: 9, name: 'Google', image: 'Course_Certificate.png' },
+    { id: 10, name: 'IHK', image: 'D_IHK_.png' },
+    { id: 11, name: 'Problem Solving', image: 'HackerRankjavaCertificate_problemSolving.png' },
+    { id: 12, name: 'Java', image: 'HackerRankjavaCertificateJava.png' },
+    { id: 13, name: 'Umschullung', image: 'forum.png' },
+    { id: 14, name: 'Englisch', image: 'Englisch.png' },
+    { id: 15, name: 'Java', image: 'Java_IBM.png' },
+    { id: 16, name: 'Maven', image: 'Maven.png' },
+    { id: 17, name: 'Cloud', image: 'Certificat_cloud.png' },
+    { id: 18, name: 'Python', image: 'SL_certificate_pythn.png' },
+    { id: 19, name: 'Google', image: 'ZertifikatGoogleZukunftswerkstat.png' },
   ];
 
   const openModal = (cert) => {
@@ -35,7 +72,10 @@ function App() {
       {/* Navigation Bar */}
       <nav className="navbar">
         <div className="nav-container">
-          <div className="logo">AMER</div>
+          <div className="logo">
+            <img src="IconEye.png" className="Icon_Img"></img>
+            Amer
+          </div>
           <ul className="nav-links">
             <li><button onClick={() => scrollToSection('home')} className="nav-btn">Home</button></li>
             <li><button onClick={() => scrollToSection('about')} className="nav-btn">About</button></li>
@@ -52,7 +92,7 @@ function App() {
       <section id="home" className="hero-section">
         <div className="hero-content">
           <RotatingName />
-          <div className="hero-text">
+          <div className="hero-text margin_top">
             <p>Software Engineer | Full-Stack Developer | Problem Solver</p>
           </div>
         </div>
@@ -100,7 +140,13 @@ function App() {
         <section id="experience">
           <div className="card">
             <h2 className="section-title">Experience</h2>
-            
+            <div className="timeline-item">
+              <div className="timeline-title">Software Developer</div>
+              <div className="timeline-subtitle">Think 3 DDD Gmbh| Berlin</div>
+              <div className="timeline-date">02/2026 - Today</div>
+              <p>Desktop application processing Biometric Data with specific outputs. Tech stack: Java, SQL, Spring Boot, Database</p>
+            </div>
+
             <div className="timeline-item">
               <div className="timeline-title">Software Developer</div>
               <div className="timeline-subtitle">IBM Client Innovation Center Germany GmbH | Magdeburg</div>
@@ -244,23 +290,28 @@ function App() {
           </div>
         </div>
       )}
-
-      {/* Footer with GitHub and LinkedIn */}
-      <footer className="footer">
-        <div className="social-links">
-          <a href="https://github.com/Al-Amer" target="_blank" rel="noopener noreferrer" className="social-link">
-            <i className="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/amer-almonajed" target="_blank" rel="noopener noreferrer" className="social-link">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="mailto:amer.almonajed@gmx.de" className="social-link">
-            <i className="fas fa-envelope"></i>
-          </a>
-        </div>
+     <footer className="footer">
         <div className="footer-text">
+          <div className="social-icons-container">
+            <a href="https://github.com/Al-Amer" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
+              <FaGithub />
+              <span className="icon-label">GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/amer-almonajed" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
+              <FaLinkedin />
+              <span className="icon-label">LinkedIn</span>
+            </a>
+            <a href="mailto:amer.almonajed@gmx.de" className="footer-icon-link">
+              <FaEnvelope />
+              <span className="icon-label">Email</span>
+            </a>
+            <a href="tel:+49000000000" className="footer-icon-link">
+              <FaPhone />
+              <span className="icon-label">Phone</span>
+            </a>
+          </div>
           <p>© 2026 Amer Almonajed - Software Engineer | Berlin, Germany</p>
-          <p>GitHub: github.com/Al-Amer | LinkedIn: Amer Almonajed</p>
+          <img src="IconEye.png" className="Icon_Img_large" alt="Icon" />
         </div>
       </footer>
     </div>

@@ -43,6 +43,7 @@ const RotatingName = () => {
           text-align: center;
           letter-spacing: 4px;
           margin: 0;
+          padding-bottom :220px;
         }
         @keyframes gradientShift {
           0% { background-position: 0% 50%; }
@@ -144,10 +145,11 @@ const RotatingName = () => {
           .ring-4 { width: 440px; height: 440px; }
         }
       `}</style>
+      <h1 className="glowing-name">AMER ALMONAJED</h1>
       <div className="rotating-name-container">
         <div className="name-3d">
           <div className="name-wrapper">
-            <h1 className="glowing-name">AMER ALMONAJED</h1>
+            {/* <h1 className="glowing-name">AMER ALMONAJED</h1> */}
             <div className="name-shadow"></div>
           </div>
           <div className="orbiting-rings">
