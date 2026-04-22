@@ -513,3 +513,45 @@
     font-size: 0.65rem;
   }
 }
+.simple-language-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.simple-language-item {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.simple-language-item:hover {
+  transform: scale(1.02);
+  background: rgba(168, 85, 247, 0.2);
+}
+
+.simple-flag {
+  font-size: 1.5rem;
+}
+
+.simple-name {
+  font-weight: bold;
+  color: #a855f7;
+}
+
+.simple-level {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+}
+
+.simple-stars {
+  color: #fbbf24;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
