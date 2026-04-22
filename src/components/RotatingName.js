@@ -153,7 +153,7 @@ const RotatingName = () => {
             <div className="name-shadow"></div>
           </div>
           <div className="orbiting-rings">
-            <img className='ring ring-0' src='IMG_5531.jpg' alt='Image'/>
+            <img className='ring ring-0' src='IMG_5531.jpg' alt='Decorative ring'/>
             <div className="ring ring-1">R
             </div>
             <div className="ring ring-2">E</div>
