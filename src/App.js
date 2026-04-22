@@ -149,17 +149,30 @@ function App() {
         <section id="projects">
           <div className="card">
             <h2 className="section-title">Projects</h2>
+            
             <div className="timeline-item">
-              <div className="timeline-title">CuttingCalculator</div>
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/Cutting-Calculator'>CuttingCalculator</a></div>
               <p>Android app written on Android Studio using Java for measuring metal. Designed for precise industrial measurements.</p>
             </div>
+
             <div className="timeline-item">
-              <div className="timeline-title">SpeakFUn</div>
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/SpeakFun'>SpeakFUn</a></div>
               <p>Android application written in Java implementing voice-to-text and mutual interaction features.</p>
             </div>
+
             <div className="timeline-item">
-              <div className="timeline-title">My-WEB in HTML</div>
-              <p>Personal CV website with all skills, links, and testimonials built with HTML, CSS, and responsive design.</p>
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/Space-Invaders'>Space Invaders</a></div>
+              <p>is a shoot-'em-up computer game designed and programmed by Tomohiro Nishikado and published by Taito.</p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/WBS-GroupProject05-ChallengeTracker'>ChallengeTracker</a></div>
+              <p>ChallengeTracker: A lightweight platform that allows users to create and join short challenges (such as "Read 100 pages this week") 
+                and track their daily progress. </p>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/devshare'>DevShare</a></div>
+              <p>DevShare - Social Dev Resource Hub. Check out the live app: <a href='https://devshare-two.vercel.app'>DevShare on Vercel</a></p>
             </div>
           </div>
         </section>
