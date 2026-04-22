@@ -299,6 +299,32 @@ function App() {
           </div>
         </div>
       )}
+       <section id="profiles">
+          <div className='profiles' >
+          <div className="card">
+            <h2 className="section-title">Online Profiles</h2>
+            <div className="profiles-grid">
+              <a href="https://learn.microsoft.com/en-gb/users/ameralmonajed-0432/" target="_blank" rel="noopener noreferrer" className="profile-card">
+                <i className="fab fa-microsoft"></i>
+                <div className="profile-info">
+                  <h3>Microsoft Learn</h3>
+                  <p>View my certifications and learning path</p>
+                </div>
+                <span className="profile-arrow">→</span>
+              </a>
+              
+              <a href="https://www.hackerrank.com/profile/al19842000" target="_blank" rel="noopener noreferrer" className="profile-card">
+                <i className="fab fa-hackerrank"></i>
+                <div className="profile-info">
+                  <h3>HackerRank</h3>
+                  <p>View my coding challenges and solutions</p>
+                </div>
+                <span className="profile-arrow">→</span>
+              </a>
+            </div>
+          </div>
+          </div>
+        </section>
      <footer className="footer">
         <div className="footer-text">
           <div className="social-icons-container">

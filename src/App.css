@@ -513,6 +513,7 @@
     font-size: 0.65rem;
   }
 }
+/* Languag section  */
 .simple-language-grid {
   display: flex;
   flex-wrap: wrap;
@@ -554,4 +555,96 @@
   color: #fbbf24;
   font-size: 0.9rem;
   letter-spacing: 2px;
+}
+.profiles {
+  background: rgba(15, 12, 41, 0.95);
+  padding: 2rem;
+  /* margin-top: 3rem; */
+  margin-left: 8rem;
+  margin-right: 8rem;
+  text-align: center;
+  border-top: 1px solid rgba(168, 85, 247, 0.3);
+}
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.profile-card {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(168, 85, 247, 0.6);
+  background: rgba(168, 85, 247, 0.1);
+  box-shadow: 0 5px 20px rgba(168, 85, 247, 0.3);
+}
+
+.profile-card i {
+  font-size: 3rem;
+  color: #a855f7;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover i {
+  transform: scale(1.1);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h3 {
+  color: white;
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+}
+
+.profile-info p {
+  color: #cbd5e1;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.profile-arrow {
+  color: #a855f7;
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover .profile-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Specific icon colors on hover */
+.profile-card:hover .fa-microsoft {
+  color: #00a4ef;
+}
+
+.profile-card:hover .fa-hackerrank {
+  color: #2ec866;
+}
+
+.profile-card:hover .fa-github {
+  color: #ffffff;
+}
+
+.profile-card:hover .fa-linkedin {
+  color: #0077b5;
 }
