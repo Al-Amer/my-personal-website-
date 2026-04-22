@@ -49,7 +49,6 @@ function App() {
     <div className="App">
       {/* Animated Rainbow Background */}
       <AnimatedBackground />
-      
       {/* Navigation Bar */}
       <nav className="navbar">
         <div className="nav-container">
@@ -68,7 +67,6 @@ function App() {
           </ul>
         </div>
       </nav>
-
       {/* Hero Section with 3D Rotating Name */}
       <section id="home" className="hero-section">
         <div className="hero-content">
@@ -78,7 +76,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Main Content */}
       <div className="container">
         {/* About Section */}
@@ -88,12 +85,10 @@ function App() {
             <p>I am an enthusiastic junior software engineer with a passion for problem solving and a solid foundation in software development methodologies, eager to contribute to innovative projects and grow within a dynamic organization. Based in Berlin with international experience across Greece and Germany, I bring diverse perspectives to every project.</p>
           </div>
         </section>
-
         {/* Education Section */}
         <section id="education">
           <div className="card">
             <h2 className="section-title">Education</h2>
-            
             <div className="timeline-item">
               <div className="timeline-title">SOFTWARE ENGINEERING PROGRAM</div>
               <div className="timeline-subtitle">WBS CODING SCHOOL | Berlin</div>
@@ -101,14 +96,12 @@ function App() {
               <p>Software Engineering, Computer Science, Data Structure and Algorithms</p>
               <p>Certifications: Python PCEP, Azure Fundamentals</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title">SPECIALIST FOR APPLICATION DEVELOPMENT</div>
               <div className="timeline-subtitle">FORUM Berufsbildung e.V. | Berlin</div>
               <div className="timeline-date">08/2020 - 07/2022</div>
               <p>Java, Database SQL, Network, Windows Server Administration</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title">Training as an Electrical Engineer</div>
               <div className="timeline-subtitle">KALE TECHNICAL SCHOOL | Greece - Athens</div>
@@ -116,7 +109,6 @@ function App() {
             </div>
           </div>
         </section>
-
         {/* Experience Section */}
         <section id="experience">
           <div className="card">
@@ -127,28 +119,24 @@ function App() {
               <div className="timeline-date">02/2026 - Today</div>
               <p>Desktop application processing Biometric Data with specific outputs. Tech stack: Java, SQL, Spring Boot, Database</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title">Software Developer</div>
               <div className="timeline-subtitle">IBM Client Innovation Center Germany GmbH | Magdeburg</div>
               <div className="timeline-date">03/2023 - 09/2023</div>
               <p>Desktop application processing Biometric Data with specific outputs. Tech stack: Java, SQL, Spring Boot, Database</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title">Internship as Website Developer</div>
               <div className="timeline-subtitle">Druck und Folie | Berlin</div>
               <div className="timeline-date">05/2021 - 03/2022</div>
               <p>WordPress, HTML, CSS, Graphic Design, Java, Database SQL, Network, Windows Server Administration</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title">Media and Print Designer</div>
               <div className="timeline-subtitle">TIPOSEME SIGNMAKING | Athens - Berlin</div>
               <div className="timeline-date">09/2017 - 03/2020</div>
               <p>Graphic design and Assembly</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title">Internship as Fullstack Developer</div>
               <div className="timeline-subtitle">Think3DDD | Berlin</div>
@@ -157,29 +145,24 @@ function App() {
             </div>
           </div>
         </section>
-
         {/* Projects Section */}
         <section id="projects">
           <div className="card">
             <h2 className="section-title">Projects</h2>
-            
             <div className="timeline-item">
               <div className="timeline-title">CuttingCalculator</div>
               <p>Android app written on Android Studio using Java for measuring metal. Designed for precise industrial measurements.</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title">SpeakFUn</div>
               <p>Android application written in Java implementing voice-to-text and mutual interaction features.</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title">My-WEB in HTML</div>
               <p>Personal CV website with all skills, links, and testimonials built with HTML, CSS, and responsive design.</p>
             </div>
           </div>
         </section>
-
         {/* Skills Section */}
         <section id="skills">
           <div className="card">
@@ -224,7 +207,6 @@ function App() {
                 </div>
               </div>
             </div>
-
             <h3 style={{ marginTop: '1.5rem', color: '#a855f7' }}>Soft Skills</h3>
             <div className="skill-tags">
               <span className="skill-tag">Communication</span>
@@ -233,8 +215,7 @@ function App() {
               <span className="skill-tag">Problem-Solving</span>
               <span className="skill-tag">Team Player</span>
             </div>
-
-                        <h3 style={{ marginTop: '1.5rem', color: '#a855f7' }}>Languages</h3>
+            <h3 style={{ marginTop: '1.5rem', color: '#a855f7' }}>Languages</h3>
             <div className="simple-language-grid">
               <div className="simple-language-item">
                 <span className="simple-flag">🇩🇪</span>
@@ -271,7 +252,6 @@ function App() {
             </div>
           </div>
         </section>
-
         {/* Certificates Section */}
         <section id="certificates">
           <div className="card">
@@ -312,7 +292,6 @@ function App() {
                 </div>
                 <span className="profile-arrow">→</span>
               </a>
-              
               <a href="https://www.hackerrank.com/profile/al19842000" target="_blank" rel="noopener noreferrer" className="profile-card">
                 <i className="fab fa-hackerrank"></i>
                 <div className="profile-info">
