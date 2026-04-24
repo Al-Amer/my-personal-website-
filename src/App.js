@@ -4,6 +4,7 @@ import AnimatedBackground from './components/AnimatedBackground';
 import RotatingName from './components/RotatingName';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 
+
 function App() {
   const [selectedCert, setSelectedCert] = useState(null);
 
@@ -70,7 +71,9 @@ function App() {
       {/* Hero Section with 3D Rotating Name */}
       <section id="home" className="hero-section">
         <div className="hero-content">
-          <RotatingName />
+          <div className='RotatingNameDiv'>
+            <RotatingName />
+          </div>
           <div className="hero-text margin_top">
             <p>Software Engineer | Full-Stack Developer | Problem Solver</p>
           </div>
@@ -114,10 +117,10 @@ function App() {
           <div className="card">
             <h2 className="section-title">Experience</h2>
             <div className="timeline-item">
-              <div className="timeline-title">Software Developer</div>
-              <div className="timeline-subtitle">Think 3 DDD Gmbh| Berlin</div>
-              <div className="timeline-date">02/2026 - Today</div>
-              <p>Desktop application processing Biometric Data with specific outputs. Tech stack: Java, SQL, Spring Boot, Database</p>
+              <div className="timeline-title">Internship as Fullstack Developer</div>
+              <div className="timeline-subtitle">Think3DDD | Berlin</div>
+              <div className="timeline-date">02/2026 - Present</div>
+              <p>python, react, javascript, AI Tools, Git , GitLab, DatenBank</p>
             </div>
             <div className="timeline-item">
               <div className="timeline-title">Software Developer</div>
@@ -137,12 +140,6 @@ function App() {
               <div className="timeline-date">09/2017 - 03/2020</div>
               <p>Graphic design and Assembly</p>
             </div>
-            <div className="timeline-item">
-              <div className="timeline-title">Internship as Fullstack Developer</div>
-              <div className="timeline-subtitle">Think3DDD | Berlin</div>
-              <div className="timeline-date">02/2026 - Present</div>
-              <p>Fullstack development internship</p>
-            </div>
           </div>
         </section>
         {/* Projects Section */}
@@ -151,28 +148,28 @@ function App() {
             <h2 className="section-title">Projects</h2>
             
             <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/Cutting-Calculator'>CuttingCalculator</a></div>
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/Cutting-Calculator' className='timeline-subtitle'>CuttingCalculator</a></div>
               <p>Android app written on Android Studio using Java for measuring metal. Designed for precise industrial measurements.</p>
             </div>
 
             <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/SpeakFun'>SpeakFUn</a></div>
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/SpeakFun' className='timeline-subtitle'>SpeakFUn</a></div>
               <p>Android application written in Java implementing voice-to-text and mutual interaction features.</p>
             </div>
 
             <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/Space-Invaders'>Space Invaders</a></div>
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/Space-Invaders' className='timeline-subtitle'>Space Invaders</a></div>
               <p>is a shoot-'em-up computer game designed and programmed by Tomohiro Nishikado and published by Taito.</p>
             </div>
 
             <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/WBS-GroupProject05-ChallengeTracker'>ChallengeTracker</a></div>
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/WBS-GroupProject05-ChallengeTracker' className='timeline-subtitle'>ChallengeTracker</a></div>
               <p>ChallengeTracker: A lightweight platform that allows users to create and join short challenges (such as "Read 100 pages this week") 
                 and track their daily progress. </p>
             </div>
             <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/devshare'>DevShare</a></div>
-              <p>DevShare - Social Dev Resource Hub. Check out the live app: <a href='https://devshare-two.vercel.app'>DevShare on Vercel</a></p>
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/devshare' className='timeline-subtitle'>DevShare</a></div>
+              <p>DevShare - Social Dev Resource Hub. Check out the live app: <a href='https://devshare-two.vercel.app' className='timeline-subtitle'>DevShare on Vercel</a></p>
             </div>
           </div>
         </section>
@@ -332,7 +329,7 @@ function App() {
               <FaEnvelope />
               <span className="icon-label">Email</span>
             </a>
-            <a href="tel:+49000000000" className="footer-icon-link">
+            <a href="tel:+491735307527" className="footer-icon-link">
               <FaPhone />
               <span className="icon-label">Phone</span>
             </a>

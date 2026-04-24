@@ -6,7 +6,7 @@ const RotatingName = () => {
       <style jsx="true">{`
         .rotating-name-container {
           width: 100%;
-          height: 400px;
+          height: 440px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -145,7 +145,7 @@ const RotatingName = () => {
           .ring-4 { width: 440px; height: 440px; }
         }
       `}</style>
-      <h1 className="glowing-name">AMER ALMONAJED</h1>
+      {/* <h1 className="glowing-name">AMER ALMONAJED</h1> */}
       <div className="rotating-name-container">
         <div className="name-3d">
           <div className="name-wrapper">

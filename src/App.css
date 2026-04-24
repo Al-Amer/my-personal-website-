@@ -56,11 +56,16 @@
 /* Hero Section with 3D Name */
 .hero-section {
   min-height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   margin-top: 60px;
+}
+.RotatingNameDiv{
+  margin-top: 110px;
+  padding-top: 110px;
 }
 
 .hero-content {
