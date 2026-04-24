@@ -335,7 +335,8 @@ function App() {
             </a>
           </div>
           <p>© 2026 Amer Almonajed - Software Engineer | Berlin, Germany</p>
-          <img src="IconEye.png" className="Icon_Img_large" alt="Icon" />
+          <br/>
+          <img src="IconEye.png" className="Icon_Img_large" alt="Icon"/>
         </div>
       </footer>
     </div>
