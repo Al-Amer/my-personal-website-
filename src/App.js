@@ -54,7 +54,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-container">
           <div className="logo">
-            <img src="IconEye.png" className="Icon_Img"></img>
+            <img src="IconEye.png" className="Icon_Img" alt="Icon"></img>
             Amer
           </div>
           <ul className="nav-links">
