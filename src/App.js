@@ -146,6 +146,16 @@ function App() {
         <section id="projects">
           <div className="card">
             <h2 className="section-title">Projects</h2>
+
+            <div className="timeline-item">
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/devshare' className='timeline-subtitle'>DevShare</a></div>
+              <p>Social Dev Resource Hub. Check out the live app: <a href='https://devshare-two.vercel.app' className='timeline-subtitle'>DevShare on Vercel</a></p>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-title"><a href='https://github.com/Al-Amer/PokGameBattle.git' className='timeline-subtitle'>PokGameBattle</a></div>
+              <p>Full-stack Pokémon battle game with React, Node.js, and PostgreSQL ,live app: <a href='https://pokemonbattel.netlify.app' className='timeline-subtitle'>PokGameBattle on netlify</a></p>
+            </div>
             
             <div className="timeline-item">
               <div className="timeline-title"><a href='https://github.com/Al-Amer/Cutting-Calculator' className='timeline-subtitle'>CuttingCalculator</a></div>
@@ -164,13 +174,12 @@ function App() {
 
             <div className="timeline-item">
               <div className="timeline-title"><a href='https://github.com/Al-Amer/WBS-GroupProject05-ChallengeTracker' className='timeline-subtitle'>ChallengeTracker</a></div>
-              <p>ChallengeTracker: A lightweight platform that allows users to create and join short challenges (such as "Read 100 pages this week") 
-                and track their daily progress. </p>
+              <p>ChallengeTracker: A lightweight platform that allows users to create and join short challenges and track their daily progress. </p>
             </div>
-            <div className="timeline-item">
+            {/* <div className="timeline-item">
               <div className="timeline-title"><a href='https://github.com/Al-Amer/devshare' className='timeline-subtitle'>DevShare</a></div>
               <p>DevShare - Social Dev Resource Hub. Check out the live app: <a href='https://devshare-two.vercel.app' className='timeline-subtitle'>DevShare on Vercel</a></p>
-            </div>
+            </div> */}
           </div>
         </section>
         {/* Skills Section */}
