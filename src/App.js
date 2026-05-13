@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 import AnimatedBackground from './components/AnimatedBackground';
 import RotatingName from './components/RotatingName';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
-
+import CircularCertificates from './components/CircularCertificates';
 
 function App() {
   const [selectedCert, setSelectedCert] = useState(null);
@@ -46,15 +46,63 @@ function App() {
     }
   };
 
+  const scrollContainerRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    let scrollInterval;
+    
+    const startAutoScroll = () => {
+      scrollInterval = setInterval(() => {
+        if (container) {
+          if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            container.scrollBy({ left: 1, behavior: 'smooth' });
+          }
+        }
+      }, 30);
+    };
+    
+    const stopAutoScroll = () => {
+      clearInterval(scrollInterval);
+    };
+    
+    if (container) {
+      startAutoScroll();
+      container.addEventListener('mouseenter', stopAutoScroll);
+      container.addEventListener('mouseleave', startAutoScroll);
+    }
+    
+    return () => {
+      if (container) {
+        container.removeEventListener('mouseenter', stopAutoScroll);
+        container.removeEventListener('mouseleave', startAutoScroll);
+      }
+      clearInterval(scrollInterval);
+    };
+  }, []);
+
   return (
     <div className="App">
-      {/* Animated Rainbow Background */}
       <AnimatedBackground />
-      {/* Navigation Bar */}
+      
       <nav className="navbar">
         <div className="nav-container">
           <div className="logo">
-            <img src="IconEye.png" className="Icon_Img" alt="Icon"></img>
+            <img src="IconEye.png" className="Icon_Img" alt="Icon" />
             Amer
           </div>
           <ul className="nav-links">
@@ -68,10 +116,10 @@ function App() {
           </ul>
         </div>
       </nav>
-      {/* Hero Section with 3D Rotating Name */}
+
       <section id="home" className="hero-section">
         <div className="hero-content">
-          <div className='RotatingNameDiv'>
+          <div className="RotatingNameDiv">
             <RotatingName />
           </div>
           <div className="hero-text margin_top">
@@ -79,16 +127,15 @@ function App() {
           </div>
         </div>
       </section>
-      {/* Main Content */}
+
       <div className="container">
-        {/* About Section */}
         <section id="about">
           <div className="card">
             <h2 className="section-title">About Me</h2>
             <p>I am an enthusiastic junior software engineer with a passion for problem solving and a solid foundation in software development methodologies, eager to contribute to innovative projects and grow within a dynamic organization. Based in Berlin with international experience across Greece and Germany, I bring diverse perspectives to every project.</p>
           </div>
         </section>
-        {/* Education Section */}
+
         <section id="education">
           <div className="card">
             <h2 className="section-title">Education</h2>
@@ -112,7 +159,7 @@ function App() {
             </div>
           </div>
         </section>
-        {/* Experience Section */}
+
         <section id="experience">
           <div className="card">
             <h2 className="section-title">Experience</h2>
@@ -120,7 +167,7 @@ function App() {
               <div className="timeline-title">Internship as Fullstack Developer</div>
               <div className="timeline-subtitle">Think3DDD | Berlin</div>
               <div className="timeline-date">02/2026 - Present</div>
-              <p>python, react, javascript, AI Tools, Git , GitLab, DatenBank</p>
+              <p>python, react, javascript, AI Tools, Git, GitLab, DatenBank</p>
             </div>
             <div className="timeline-item">
               <div className="timeline-title">Software Developer</div>
@@ -142,47 +189,37 @@ function App() {
             </div>
           </div>
         </section>
-        {/* Projects Section */}
+
         <section id="projects">
           <div className="card">
             <h2 className="section-title">Projects</h2>
-
             <div className="timeline-item">
               <div className="timeline-title"><a href='https://github.com/Al-Amer/devshare' className='timeline-subtitle'>DevShare</a></div>
               <p>Social Dev Resource Hub. Check out the live app: <a href='https://devshare-two.vercel.app' className='timeline-subtitle'>DevShare on Vercel</a></p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title"><a href='https://github.com/Al-Amer/PokGameBattle.git' className='timeline-subtitle'>PokGameBattle</a></div>
-              <p>Full-stack Pokémon battle game with React, Node.js, and PostgreSQL ,live app: <a href='https://pokemonbattel.netlify.app' className='timeline-subtitle'>PokGameBattle on netlify</a></p>
+              <p>Full-stack Pokémon battle game with React, Node.js, and PostgreSQL, live app: <a href='https://pokemonbattel.netlify.app' className='timeline-subtitle'>PokGameBattle on netlify</a></p>
             </div>
-            
             <div className="timeline-item">
               <div className="timeline-title"><a href='https://github.com/Al-Amer/Cutting-Calculator' className='timeline-subtitle'>CuttingCalculator</a></div>
-              <p>Android app written on Android Studio using Java for measuring metal. Designed for precise industrial measurements.</p>
+              <p>Android app written on Android Studio using Java for measuring metal.</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title"><a href='https://github.com/Al-Amer/SpeakFun' className='timeline-subtitle'>SpeakFUn</a></div>
-              <p>Android application written in Java implementing voice-to-text and mutual interaction features.</p>
+              <p>Android application written in Java implementing voice-to-text features.</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title"><a href='https://github.com/Al-Amer/Space-Invaders' className='timeline-subtitle'>Space Invaders</a></div>
-              <p>is a shoot-'em-up computer game designed and programmed by Tomohiro Nishikado and published by Taito.</p>
+              <p>Classic shoot-'em-up game recreation.</p>
             </div>
-
             <div className="timeline-item">
               <div className="timeline-title"><a href='https://github.com/Al-Amer/WBS-GroupProject05-ChallengeTracker' className='timeline-subtitle'>ChallengeTracker</a></div>
-              <p>ChallengeTracker: A lightweight platform that allows users to create and join short challenges and track their daily progress. </p>
+              <p>Platform to create and join challenges, track daily progress.</p>
             </div>
-            {/* <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/devshare' className='timeline-subtitle'>DevShare</a></div>
-              <p>DevShare - Social Dev Resource Hub. Check out the live app: <a href='https://devshare-two.vercel.app' className='timeline-subtitle'>DevShare on Vercel</a></p>
-            </div> */}
           </div>
         </section>
-        {/* Skills Section */}
+
         <section id="skills">
           <div className="card">
             <h2 className="section-title">Tech Skills</h2>
@@ -240,55 +277,47 @@ function App() {
                 <span className="simple-flag">🇩🇪</span>
                 <span className="simple-name">German</span>
                 <span className="simple-level">B2</span>
-                <div className="simple-stars">
-                  ⭐⭐⭐⭐☆
-                </div>
+                <div className="simple-stars">⭐⭐⭐⭐☆</div>
               </div>
               <div className="simple-language-item">
                 <span className="simple-flag">🇬🇧</span>
                 <span className="simple-name">English</span>
                 <span className="simple-level">B2</span>
-                <div className="simple-stars">
-                  ⭐⭐⭐⭐☆
-                </div>
+                <div className="simple-stars">⭐⭐⭐⭐☆</div>
               </div>
               <div className="simple-language-item">
                 <span className="simple-flag">🇸🇾</span>
                 <span className="simple-name">Arabic</span>
                 <span className="simple-level">Native</span>
-                <div className="simple-stars">
-                  ⭐⭐⭐⭐⭐
-                </div>
+                <div className="simple-stars">⭐⭐⭐⭐⭐</div>
               </div>
               <div className="simple-language-item">
                 <span className="simple-flag">🇬🇷</span>
                 <span className="simple-name">Greek</span>
                 <span className="simple-level">B2</span>
-                <div className="simple-stars">
-                  ⭐⭐⭐⭐☆
-                </div>
+                <div className="simple-stars">⭐⭐⭐⭐☆</div>
               </div>
             </div>
           </div>
         </section>
-        {/* Certificates Section */}
+
+        {/* Circular Certificates Section - Only one! */}
         <section id="certificates">
           <div className="card">
             <h2 className="section-title">Certificates</h2>
-            <div className="certificates-grid">
-              {certificates.map(cert => (
-                <div key={cert.id} className="cert-card" onClick={() => openModal(cert)}>
-                  <div className="cert-icon">📜</div>
-                  <div className="cert-name">{cert.name}</div>
-                </div>
-              ))}
-            </div>
-            <p style={{ marginTop: '1rem', fontSize: '0.8rem', opacity: 0.7 }}>✨ Click on any certificate to view full size ✨</p>
+            <CircularCertificates 
+              certificates={certificates}
+              onSelectCert={(cert) => {
+                window.open(cert.image, '_blank');
+              }}
+            />
+            <p style={{ marginTop: '1rem', fontSize: '0.8rem', opacity: 0.7, textAlign: 'center' }}>
+              ✨ Click on any certificate to view full size ✨
+            </p>
           </div>
         </section>
       </div>
 
-      {/* Modal for Certificates */}
       {selectedCert && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -298,8 +327,9 @@ function App() {
           </div>
         </div>
       )}
-       <section id="profiles">
-          <div className='profiles' >
+
+      <section id="profiles">
+        <div className="profiles">
           <div className="card">
             <h2 className="section-title">Online Profiles</h2>
             <div className="profiles-grid">
@@ -321,9 +351,10 @@ function App() {
               </a>
             </div>
           </div>
-          </div>
-        </section>
-     <footer className="footer">
+        </div>
+      </section>
+
+      <footer className="footer">
         <div className="footer-text">
           <div className="social-icons-container">
             <a href="https://github.com/Al-Amer" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
@@ -344,8 +375,8 @@ function App() {
             </a>
           </div>
           <p>© 2026 Amer Almonajed - Software Engineer | Berlin, Germany</p>
-          <br/>
-          <img src="IconEye.png" className="Icon_Img_large" alt="Icon"/>
+          <br />
+          <img src="IconEye.png" className="Icon_Img_large" alt="Icon" />
         </div>
       </footer>
     </div>
