@@ -308,7 +308,7 @@ function App() {
             <CircularCertificates 
               certificates={certificates}
               onSelectCert={(cert) => {
-                window.open(cert.image, '_blank');
+                console.log('Certificate clicked:', cert.name);
               }}
             />
             <p style={{ marginTop: '1rem', fontSize: '0.8rem', opacity: 0.7, textAlign: 'center' }}>
@@ -384,3 +384,5 @@ function App() {
 }
 
 export default App;
+
+// 
