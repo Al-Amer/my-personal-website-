@@ -31,9 +31,9 @@ function App() {
     { id: 19, name: 'Google', image: 'ZertifikatGoogleZukunftswerkstat.png' },
   ];
 
-  const openModal = (cert) => {
-    setSelectedCert(cert);
-  };
+  // const openModal = (cert) => {
+  //   setSelectedCert(cert);
+  // };
 
   const closeModal = () => {
     setSelectedCert(null);
@@ -48,17 +48,17 @@ function App() {
 
   const scrollContainerRef = useRef(null);
 
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
-    }
-  };
+  // const scrollLeft = () => {
+  //   if (scrollContainerRef.current) {
+  //     scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+  //   }
+  // };
 
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-    }
-  };
+  // const scrollRight = () => {
+  //   if (scrollContainerRef.current) {
+  //     scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+  //   }
+  // };
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -135,6 +135,64 @@ function App() {
             <p>I am an enthusiastic junior software engineer with a passion for problem solving and a solid foundation in software development methodologies, eager to contribute to innovative projects and grow within a dynamic organization. Based in Berlin with international experience across Greece and Germany, I bring diverse perspectives to every project.</p>
           </div>
         </section>
+        <section id="stats">
+          <div className="card stats-container">
+            <div className="stat-item">
+              <div className="stat-number">19+</div>
+              <div className="stat-label">Certifications</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">15+</div>
+              <div className="stat-label">Projects Completed</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">4</div>
+              <div className="stat-label">Programming Languages</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">1000+</div>
+              <div className="stat-label">Hours of Coding</div>
+            </div>
+          </div>
+        </section>
+        <section id="testimonials">
+          <div className="card">
+            <h2 className="section-title">What People Say</h2>
+            <div className="testimonial-grid">
+              <div className="testimonial">
+                <p>"Amer is a dedicated developer who brings creative solutions to complex problems."</p>
+                <h4>- Team Lead, IBM</h4>
+              </div>
+              <div className="testimonial">
+                <p>"His problem-solving skills and attention to detail are exceptional."</p>
+                <h4>- Mentor, WBS Coding School</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="fun-facts">
+          <div className="card">
+            <h2 className="section-title">Beyond the Code</h2>
+            <div className="fun-facts-grid">
+              <div className="fun-fact">
+                <span className="fun-icon">✈️</span>
+                <span>Love the SR-71 Blackbird</span>
+              </div>
+              <div className="fun-fact">
+                <span className="fun-icon">🌍</span>
+                <span>Speak 4 languages</span>
+              </div>
+              <div className="fun-fact">
+                <span className="fun-icon">⚽</span>
+                <span>Sports enthusiast</span>
+              </div>
+              <div className="fun-fact">
+                <span className="fun-icon">📚</span>
+                <span>Always learning</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section id="education">
           <div className="card">
@@ -192,30 +250,57 @@ function App() {
 
         <section id="projects">
           <div className="card">
-            <h2 className="section-title">Projects</h2>
-            <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/devshare' className='timeline-subtitle'>DevShare</a></div>
-              <p>Social Dev Resource Hub. Check out the live app: <a href='https://devshare-two.vercel.app' className='timeline-subtitle'>DevShare on Vercel</a></p>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/PokGameBattle.git' className='timeline-subtitle'>PokGameBattle</a></div>
-              <p>Full-stack Pokémon battle game with React, Node.js, and PostgreSQL, live app: <a href='https://pokemonbattel.netlify.app' className='timeline-subtitle'>PokGameBattle on netlify</a></p>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/Cutting-Calculator' className='timeline-subtitle'>CuttingCalculator</a></div>
-              <p>Android app written on Android Studio using Java for measuring metal.</p>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/SpeakFun' className='timeline-subtitle'>SpeakFUn</a></div>
-              <p>Android application written in Java implementing voice-to-text features.</p>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/Space-Invaders' className='timeline-subtitle'>Space Invaders</a></div>
-              <p>Classic shoot-'em-up game recreation.</p>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-title"><a href='https://github.com/Al-Amer/WBS-GroupProject05-ChallengeTracker' className='timeline-subtitle'>ChallengeTracker</a></div>
-              <p>Platform to create and join challenges, track daily progress.</p>
+            <h2 className="section-title">🚀 Projects</h2>
+            <div className="projects-grid">
+              <div className="project-card">
+                <h3>DevShare</h3>
+                <p>Social Dev Resource Hub - Share and discover development resources</p>
+                <div className="project-links">
+                  <a href="https://github.com/Al-Amer/devshare" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href="https://devshare-two.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                </div>
+              </div>
+
+              <div className="project-card">
+                <h3>PokGameBattle</h3>
+                <p>Full-stack Pokémon battle game with React, Node.js, and PostgreSQL</p>
+                <div className="project-links">
+                  <a href="https://github.com/Al-Amer/PokGameBattle.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href="https://pokemonbattel.netlify.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                </div>
+              </div>
+
+              <div className="project-card">
+                <h3>CuttingCalculator</h3>
+                <p>Android app written on Android Studio using Java for measuring metal</p>
+                <div className="project-links">
+                  <a href="https://github.com/Al-Amer/Cutting-Calculator" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+
+              <div className="project-card">
+                <h3>SpeakFUn</h3>
+                <p>Android application written in Java implementing voice-to-text features</p>
+                <div className="project-links">
+                  <a href="https://github.com/Al-Amer/SpeakFun" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+
+              <div className="project-card">
+                <h3>Space Invaders</h3>
+                <p>Classic shoot-'em-up game recreation</p>
+                <div className="project-links">
+                  <a href="https://github.com/Al-Amer/Space-Invaders" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
+
+              <div className="project-card">
+                <h3>ChallengeTracker</h3>
+                <p>Platform to create and join challenges, track daily progress</p>
+                <div className="project-links">
+                  <a href="https://github.com/Al-Amer/WBS-GroupProject05-ChallengeTracker" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
