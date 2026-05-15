@@ -172,23 +172,53 @@ function App() {
         </section>
         <section id="fun-facts">
           <div className="card">
-            <h2 className="section-title">Beyond the Code</h2>
-            <div className="fun-facts-grid">
-              <div className="fun-fact">
-                <span className="fun-icon">✈️</span>
-                <span>Love the SR-71 Blackbird</span>
+            <h2 className="section-title">🌟 Beyond the Code</h2>
+            <div className="fun-facts-enhanced">
+              <div className="fun-fact-card" data-delay="0">
+                <div className="fun-fact-icon">✈️</div>
+                <div className="fun-fact-content">
+                  <h4>Aviation Enthusiast</h4>
+                  <p>Fascinated by the SR-71 Blackbird and aerospace engineering</p>
+                </div>
+                <div className="fun-fact-hover-effect"></div>
               </div>
-              <div className="fun-fact">
-                <span className="fun-icon">🌍</span>
-                <span>Speak 4 languages</span>
+              
+              <div className="fun-fact-card" data-delay="1">
+                <div className="fun-fact-icon">🌍</div>
+                <div className="fun-fact-content">
+                  <h4>Polyglot</h4>
+                  <p>Fluent in 4 languages: German, English, Arabic, Greek</p>
+                  <div className="language-bubbles">
+                    <span>🇩🇪 B2</span>
+                    <span>🇬🇧 B2</span>
+                    <span>🇸🇾 Native</span>
+                    <span>🇬🇷 B2</span>
+                  </div>
+                </div>
+                <div className="fun-fact-hover-effect"></div>
               </div>
-              <div className="fun-fact">
-                <span className="fun-icon">⚽</span>
-                <span>Sports enthusiast</span>
+              
+              <div className="fun-fact-card" data-delay="2">
+                <div className="fun-fact-icon">⚽</div>
+                <div className="fun-fact-content">
+                  <h4>Active Lifestyle</h4>
+                  <p>Sports enthusiast who believes in work-life balance</p>
+                </div>
+                <div className="fun-fact-hover-effect"></div>
               </div>
-              <div className="fun-fact">
-                <span className="fun-icon">📚</span>
-                <span>Always learning</span>
+              
+              <div className="fun-fact-card" data-delay="3">
+                <div className="fun-fact-icon">📚</div>
+                <div className="fun-fact-content">
+                  <h4>Lifelong Learner</h4>
+                  <p>Constantly exploring new technologies and frameworks</p>
+                  <div className="learning-stack">
+                    <span>AI/ML</span>
+                    <span>Cloud</span>
+                    <span>DevOps</span>
+                  </div>
+                </div>
+                <div className="fun-fact-hover-effect"></div>
               </div>
             </div>
           </div>
@@ -196,54 +226,140 @@ function App() {
 
         <section id="education">
           <div className="card">
-            <h2 className="section-title">Education</h2>
-            <div className="timeline-item">
-              <div className="timeline-title">SOFTWARE ENGINEERING PROGRAM</div>
-              <div className="timeline-subtitle">WBS CODING SCHOOL | Berlin</div>
-              <div className="timeline-date">03/2025 - 04/2026</div>
-              <p>Software Engineering, Computer Science, Data Structure and Algorithms</p>
-              <p>Certifications: Python PCEP, Azure Fundamentals</p>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-title">SPECIALIST FOR APPLICATION DEVELOPMENT</div>
-              <div className="timeline-subtitle">FORUM Berufsbildung e.V. | Berlin</div>
-              <div className="timeline-date">08/2020 - 07/2022</div>
-              <p>Java, Database SQL, Network, Windows Server Administration</p>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-title">Training as an Electrical Engineer</div>
-              <div className="timeline-subtitle">KALE TECHNICAL SCHOOL | Greece - Athens</div>
-              <div className="timeline-date">09/2002 - 08/2005</div>
+            <h2 className="section-title">🎓 Education Journey</h2>
+            <div className="education-timeline-enhanced">
+              <div className="timeline-item-enhanced">
+                <div className="timeline-dot">
+                  <span>📘</span>
+                </div>
+                <div className="timeline-line"></div>
+                <div className="timeline-content">
+                  <div className="timeline-year">2025 - 2026</div>
+                  <h3>SOFTWARE ENGINEERING PROGRAM</h3>
+                  <h4>WBS CODING SCHOOL | Berlin</h4>
+                  <p>Software Engineering, Computer Science, Data Structure and Algorithms</p>
+                  <div className="timeline-badges">
+                    <span className="badge">Python PCEP</span>
+                    <span className="badge">Azure Fundamentals</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="timeline-item-enhanced">
+                <div className="timeline-dot">
+                  <span>💻</span>
+                </div>
+                <div className="timeline-line"></div>
+                <div className="timeline-content">
+                  <div className="timeline-year">2020 - 2022</div>
+                  <h3>SPECIALIST FOR APPLICATION DEVELOPMENT</h3>
+                  <h4>FORUM Berufsbildung e.V. | Berlin</h4>
+                  <p>Java, Database SQL, Network, Windows Server Administration</p>
+                </div>
+              </div>
+
+              <div className="timeline-item-enhanced">
+                <div className="timeline-dot">
+                  <span>⚡</span>
+                </div>
+                <div className="timeline-line"></div>
+                <div className="timeline-content">
+                  <div className="timeline-year">2002 - 2005</div>
+                  <h3>Electrical Engineering Training</h3>
+                  <h4>KALE TECHNICAL SCHOOL | Greece - Athens</h4>
+                  <p>Foundation in electrical systems and engineering principles</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="experience">
           <div className="card">
-            <h2 className="section-title">Experience</h2>
-            <div className="timeline-item">
-              <div className="timeline-title">Internship as Fullstack Developer</div>
-              <div className="timeline-subtitle">Think3DDD | Berlin</div>
-              <div className="timeline-date">02/2026 - Present</div>
-              <p>python, react, javascript, AI Tools, Git, GitLab, DatenBank</p>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-title">Software Developer</div>
-              <div className="timeline-subtitle">IBM Client Innovation Center Germany GmbH | Magdeburg</div>
-              <div className="timeline-date">03/2023 - 09/2023</div>
-              <p>Desktop application processing Biometric Data with specific outputs. Tech stack: Java, SQL, Spring Boot, Database</p>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-title">Internship as Website Developer</div>
-              <div className="timeline-subtitle">Druck und Folie | Berlin</div>
-              <div className="timeline-date">05/2021 - 03/2022</div>
-              <p>WordPress, HTML, CSS, Graphic Design, Java, Database SQL, Network, Windows Server Administration</p>
-            </div>
-            <div className="timeline-item">
-              <div className="timeline-title">Media and Print Designer</div>
-              <div className="timeline-subtitle">TIPOSEME SIGNMAKING | Athens - Berlin</div>
-              <div className="timeline-date">09/2017 - 03/2020</div>
-              <p>Graphic design and Assembly</p>
+            <h2 className="section-title">💼 Professional Experience</h2>
+            <div className="experience-grid-enhanced">
+              <div className="exp-card">
+                <div className="exp-header">
+                  <div className="exp-icon">🚀</div>
+                  <div className="exp-title">
+                    <h3>Fullstack Developer</h3>
+                    <h4>Think3DDD | Berlin</h4>
+                  </div>
+                  <div className="exp-date">02/2026 - Present</div>
+                </div>
+                <div className="exp-body">
+                  <p>Python, React, JavaScript, AI Tools, Git, GitLab, Database</p>
+                  <div className="exp-skills">
+                    <span>Python</span>
+                    <span>React</span>
+                    <span>AI Integration</span>
+                    <span>Git</span>
+                  </div>
+                </div>
+                <div className="exp-progress"></div>
+              </div>
+
+              <div className="exp-card">
+                <div className="exp-header">
+                  <div className="exp-icon">💼</div>
+                  <div className="exp-title">
+                    <h3>Software Developer</h3>
+                    <h4>IBM Client Innovation Center | Magdeburg</h4>
+                  </div>
+                  <div className="exp-date">03/2023 - 09/2023</div>
+                </div>
+                <div className="exp-body">
+                  <p>Desktop application processing Biometric Data with specific outputs. Tech stack: Java, SQL, Spring Boot, Database</p>
+                  <div className="exp-skills">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>SQL</span>
+                    <span>Biometric Data</span>
+                  </div>
+                </div>
+                <div className="exp-progress"></div>
+              </div>
+
+              <div className="exp-card">
+                <div className="exp-header">
+                  <div className="exp-icon">🌐</div>
+                  <div className="exp-title">
+                    <h3>Website Developer Intern</h3>
+                    <h4>Druck und Folie | Berlin</h4>
+                  </div>
+                  <div className="exp-date">05/2021 - 03/2022</div>
+                </div>
+                <div className="exp-body">
+                  <p>WordPress, HTML, CSS, Graphic Design, Java, Database SQL, Network, Windows Server Administration</p>
+                  <div className="exp-skills">
+                    <span>WordPress</span>
+                    <span>HTML/CSS</span>
+                    <span>Java</span>
+                    <span>SQL</span>
+                  </div>
+                </div>
+                <div className="exp-progress"></div>
+              </div>
+
+              <div className="exp-card">
+                <div className="exp-header">
+                  <div className="exp-icon">🎨</div>
+                  <div className="exp-title">
+                    <h3>Media and Print Designer</h3>
+                    <h4>TIPOSEME SIGNMAKING | Athens - Berlin</h4>
+                  </div>
+                  <div className="exp-date">09/2017 - 03/2020</div>
+                </div>
+                <div className="exp-body">
+                  <p>Graphic design and Assembly, combining technical and creative skills</p>
+                  <div className="exp-skills">
+                    <span>Graphic Design</span>
+                    <span>Assembly</span>
+                    <span>Creative Direction</span>
+                  </div>
+                </div>
+                <div className="exp-progress"></div>
+              </div>
             </div>
           </div>
         </section>
