@@ -3,7 +3,7 @@ import './App.css';
 import AnimatedBackground from './components/AnimatedBackground';
 import RotatingName from './components/RotatingName';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
-import CircularCertificates from './components/CircularCertificates';
+// import CircularCertificates from './components/CircularCertificates';
 import GalaxyPortfolio from './components/GalaxyPortfolio';
 import ViewToggle from './components/ViewToggle';
 
@@ -32,6 +32,11 @@ function App() {
     { id: 17, name: 'Cloud', image: 'Certificat_cloud.png' },
     { id: 18, name: 'Python', image: 'SL_certificate_pythn.png' },
     { id: 19, name: 'Google', image: 'ZertifikatGoogleZukunftswerkstat.png' },
+    { id: 20, name: 'Design Thinking', image: 'DesignThinking.png' },
+    { id: 21, name: 'ANTHROPIC', image: 'certificate_ruenqsobzbre_1780526367.png' },
+    { id: 22, name: 'ANTHROPIC', image: 'certificate_xga4rsmcko96_1780515051.png' },
+    { id: 23, name: 'ANTHROPIC', image: 'certificate_yc8wkceyurzg_1780513630.png' },
+    { id: 24, name: 'Dubai Center for Artificial Intelligence', image: 'certificate1MillionPrompters.png' },
   ];
 
   const openModal = (cert) => {
@@ -102,51 +107,50 @@ function App() {
 
   const projectsData = (
     <div>
-      <h2 className="section-title">🚀 Projects</h2>
-      <div className="projects-grid">
-        <div className="project-card">
-          <h3>DevShare</h3>
-          <p>Social Dev Resource Hub - Share and discover development resources</p>
+      <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.8rem' }}>
+        <div className="project-card" style={{ padding: '0.8rem', marginBottom: '0.5rem' }}>
+          <h4 style={{ color: '#a855f7', marginBottom: '0.3rem' }}>DevShare</h4>
+          <p style={{ fontSize: '0.8rem', color: '#cbd5e1' }}>Social Dev Resource Hub</p>
           <div className="project-links">
-            <a href="https://github.com/Al-Amer/devshare" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://devshare-two.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/Al-Amer/devshare" target="_blank" style={{ fontSize: '0.7rem' }}>GitHub</a>
+            <a href="https://devshare-two.vercel.app" target="_blank" style={{ fontSize: '0.7rem' }}>Live Demo</a>
           </div>
         </div>
-        <div className="project-card">
-          <h3>PokGameBattle</h3>
-          <p>Full-stack Pokémon battle game with React, Node.js, and PostgreSQL</p>
+        <div className="project-card" style={{ padding: '0.8rem', marginBottom: '0.5rem' }}>
+          <h4 style={{ color: '#a855f7', marginBottom: '0.3rem' }}>PokGameBattle</h4>
+          <p style={{ fontSize: '0.8rem', color: '#cbd5e1' }}>Pokémon battle game with React, Node.js</p>
           <div className="project-links">
-            <a href="https://github.com/Al-Amer/PokGameBattle.git" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://pokemonbattel.netlify.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/Al-Amer/PokGameBattle.git" target="_blank" style={{ fontSize: '0.7rem' }}>GitHub</a>
+            <a href="https://pokemonbattel.netlify.app" target="_blank" style={{ fontSize: '0.7rem' }}>Live Demo</a>
           </div>
         </div>
-        <div className="project-card">
-          <h3>ChallengeTracker</h3>
-          <p>Platform to create and join challenges, track daily progress</p>
+        <div className="project-card" style={{ padding: '0.8rem', marginBottom: '0.5rem' }}>
+          <h4 style={{ color: '#a855f7', marginBottom: '0.3rem' }}>ChallengeTracker</h4>
+          <p style={{ fontSize: '0.8rem', color: '#cbd5e1' }}>Track daily progress</p>
           <div className="project-links">
-            <a href="https://github.com/Al-Amer/WBS-GroupProject05-ChallengeTracker" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/Al-Amer/WBS-GroupProject05-ChallengeTracker" target="_blank" style={{ fontSize: '0.7rem' }}>GitHub</a>
           </div>
         </div>
-        <div className="project-card">
-          <h3>CuttingCalculator</h3>
-          <p>Android app written on Android Studio using Java for measuring metal</p>
+        <div className="project-card" style={{ padding: '0.8rem', marginBottom: '0.5rem' }}>
+          <h4 style={{ color: '#a855f7', marginBottom: '0.3rem' }}>CuttingCalculator</h4>
+          <p style={{ fontSize: '0.8rem', color: '#cbd5e1' }}>Android app for measuring metal</p>
           <div className="project-links">
-            <a href="https://github.com/Al-Amer/Cutting-Calculator" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.youtube.com/watch?v=MRNYvNwEjgo" target="_blank" rel="noopener noreferrer">YouTube Demo</a>
+            <a href="https://github.com/Al-Amer/Cutting-Calculator" target="_blank" style={{ fontSize: '0.7rem' }}>GitHub</a>
+            <a href="https://www.youtube.com/watch?v=MRNYvNwEjgo" target="_blank" style={{ fontSize: '0.7rem' }}>YouTube</a>
           </div>
         </div>
-        <div className="project-card">
-          <h3>Space Invaders</h3>
-          <p>Classic shoot-'em-up game recreation</p>
+        <div className="project-card" style={{ padding: '0.8rem', marginBottom: '0.5rem' }}>
+          <h4 style={{ color: '#a855f7', marginBottom: '0.3rem' }}>Space Invaders</h4>
+          <p style={{ fontSize: '0.8rem', color: '#cbd5e1' }}>Classic game recreation</p>
           <div className="project-links">
-            <a href="https://github.com/Al-Amer/Space-Invaders" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/Al-Amer/Space-Invaders" target="_blank" style={{ fontSize: '0.7rem' }}>GitHub</a>
           </div>
         </div>
-        <div className="project-card">
-          <h3>SpeakFUn</h3>
-          <p>Android application written in Java implementing voice-to-text features</p>
+        <div className="project-card" style={{ padding: '0.8rem', marginBottom: '0.5rem' }}>
+          <h4 style={{ color: '#a855f7', marginBottom: '0.3rem' }}>SpeakFUn</h4>
+          <p style={{ fontSize: '0.8rem', color: '#cbd5e1' }}>Voice-to-text Android app</p>
           <div className="project-links">
-            <a href="https://github.com/Al-Amer/SpeakFun" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/Al-Amer/SpeakFun" target="_blank" style={{ fontSize: '0.7rem' }}>GitHub</a>
           </div>
         </div>
       </div>
@@ -180,7 +184,7 @@ function App() {
   const certificatesData = (
     <div>
       <div className="skill-tags">
-        {certificates.slice(0, 10).map(cert => (
+        {certificates.slice(0, 24).map(cert => (
           <span key={cert.id} className="skill-tag" style={{ cursor: 'pointer' }} onClick={() => openModal(cert)}>
             {cert.name}
           </span>
@@ -511,13 +515,34 @@ function App() {
               </div>
             </div>
           </section>
-          <section id="certificates">
+          {/* <section id="certificates">
             <div className="card">
               <h2 className="section-title">Certificates</h2>
               <CircularCertificates 
                 certificates={certificates}
                 onSelectCert={(cert) => openModal(cert)}
               />
+            </div>
+          </section> */}
+          <section id="certificates">
+            <div className="card">
+              <h2 className="section-title">Certificates</h2>
+              <div className="certificates-grid-simple">
+                {certificates.map(cert => (
+                  <div 
+                    key={cert.id} 
+                    className="cert-item-simple" 
+                    onClick={() => openModal(cert)}
+                  >
+                    <div className="cert-item-icon">📜</div>
+                    <div className="cert-item-name">{cert.name}</div>
+                    <div className="cert-item-click">Click to view →</div>
+                  </div>
+                ))}
+              </div>
+              <p style={{ marginTop: '1rem', fontSize: '0.8rem', opacity: 0.7, textAlign: 'center' }}>
+                ✨ Click on any certificate to open in new window ✨
+              </p>
             </div>
           </section>
 

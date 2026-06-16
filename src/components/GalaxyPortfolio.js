@@ -22,13 +22,14 @@ const GalaxyPortfolio = ({
     { id: 'certificates', name: 'Certificates', icon: '📜', color: '#fbbf24', data: certificatesData, orbitRadius: 420, speed: 0.003 }
   ];
 
+  // Animation loop for orbits
   useEffect(() => {
     let animationId;
     let lastTime = 0;
     
     const animate = (currentTime) => {
       if (lastTime !== 0) {
-        setTime(prev => prev + 0.016); 
+        setTime(prev => prev + 0.016);
       }
       lastTime = currentTime;
       animationId = requestAnimationFrame(animate);
@@ -52,6 +53,7 @@ const GalaxyPortfolio = ({
 
   return (
     <div className="galaxy-container">
+      {/* Simple Stars Background */}
       <div className="galaxy-bg"></div>
       <div className="stars-container">
         {[...Array(150)].map((_, i) => (
@@ -64,6 +66,7 @@ const GalaxyPortfolio = ({
           }} />
         ))}
       </div>
+
       <div className="central-planet">
         <div className="central-glow"></div>
         <div className="central-image">
@@ -78,6 +81,7 @@ const GalaxyPortfolio = ({
         <div className="central-ring ring-2"></div>
         <div className="central-ring ring-3"></div>
       </div>
+
       <div className="planets-orbit-container">
         {planets.map((planet) => {
           const position = getPlanetPosition(planet.orbitRadius, planet.speed);
@@ -85,6 +89,7 @@ const GalaxyPortfolio = ({
           
           return (
             <div key={planet.id}>
+              {/* Orbit line - shows the path */}
               <div 
                 className="orbit-line"
                 style={{
@@ -141,7 +146,7 @@ const GalaxyPortfolio = ({
           <div className="planet-info-header" style={{ background: `linear-gradient(135deg, ${selectedPlanet.color}, ${selectedPlanet.color}99)`, display: 'flex', alignItems: 'center', gap: '0.8rem', padding: '1rem' }}>
             <span className="planet-info-icon" style={{ fontSize: '1.8rem' }}>{selectedPlanet.icon}</span>
             <h2 style={{ flex: 1, margin: 0, fontSize: '1.2rem', color: 'white' }}>{selectedPlanet.name}</h2>
-            <button className="planet-info-close" onClick={() => setSelectedPlanet(null)} style={{ background: 'rgba(255,255,255,0.1)', border: 'none', color: 'white', width: '28px', height: '28px', borderRadius: '50%', cursor: 'pointer' }}>✕</button>
+            <button className="planet-info-close" onClick={() => setSelectedPlanet(null)} style={{ background: 'rgba(255,255,255,0.1)', border: 'none', color: 'white', width: '28px', height: '28px', borderRadius: '50%', cursor: 'pointer', fontSize: '0.8rem' }}>✕</button>
           </div>
           <div className="planet-info-content" style={{ padding: '1rem', maxHeight: '300px', overflowY: 'auto', fontSize: '0.85rem', color: '#cbd5e1' }}>
             {selectedPlanet.data}
