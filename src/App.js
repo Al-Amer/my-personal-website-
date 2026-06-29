@@ -293,10 +293,10 @@ function App() {
                     <h4>Polyglot</h4>
                     <p>Fluent in 4 languages</p>
                     <div className="language-bubbles">
-                      <span>🇩🇪 B2</span>
-                      <span>🇬🇧 B2</span>
+                      <span>🇩🇪 Fluent</span>
+                      <span>🇬🇧 Fluent</span>
                       <span>🇸🇾 Native</span>
-                      <span>🇬🇷 B2</span>
+                      <span>🇬🇷 Fluent</span>
                     </div>
                   </div>
                 </div>
