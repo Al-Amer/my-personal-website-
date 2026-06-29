@@ -173,10 +173,10 @@ function App() {
       </div>
       <h4>Languages</h4>
       <div className="skill-tags">
-        <span className="skill-tag">🇩🇪 German B2</span>
-        <span className="skill-tag">🇬🇧 English B2</span>
+        <span className="skill-tag">🇩🇪 German Fluent</span>
+        <span className="skill-tag">🇬🇧 English Fluent</span>
         <span className="skill-tag">🇸🇾 Arabic Native</span>
-        <span className="skill-tag">🇬🇷 Greek B2</span>
+        <span className="skill-tag">🇬🇷 Greek Fluent</span>
       </div>
     </div>
   );
@@ -508,10 +508,10 @@ function App() {
               </div>
               <h3 style={{ marginTop: '1rem', color: '#a855f7' }}>Languages</h3>
               <div className="simple-language-grid">
-                <div className="simple-language-item">🇩🇪 German - B2 ⭐⭐⭐⭐☆</div>
-                <div className="simple-language-item">🇬🇧 English - B2 ⭐⭐⭐⭐☆</div>
+                <div className="simple-language-item">🇩🇪 German - Fluent ⭐⭐⭐⭐☆</div>
+                <div className="simple-language-item">🇬🇧 English - Fluent ⭐⭐⭐⭐☆</div>
                 <div className="simple-language-item">🇸🇾 Arabic - Native ⭐⭐⭐⭐⭐</div>
-                <div className="simple-language-item">🇬🇷 Greek - B2 ⭐⭐⭐⭐☆</div>
+                <div className="simple-language-item">🇬🇷 Greek - Fluent ⭐⭐⭐⭐☆</div>
               </div>
             </div>
           </section>
